@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,49 +13,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./",
-    "ignoreDeprecations": "6.0",
+    // baseUrl is removed — no longer needed or allowed in TS 6.0+
+    // ignoreDeprecations is removed — nothing to ignore anymore
+
     "paths": {
-      "@/*": [
-        "./*"
-      ],
+      "@/*": ["./*"],
       "@/components/*": [
-        "app/components/*",
-        "components/*",
-        "src/components/*"
+        "./app/components/*",
+        "./components/*",
+        "./src/components/*"
       ],
-      "@/ui/*": [
-        "app/ui/*",
-        "ui/*"
-      ],
-      "@/lib/*": [
-        "app/lib/*",
-        "lib/*"
-      ],
-      "@/hooks/*": [
-        "app/hooks/*",
-        "hooks/*"
-      ],
-      "@/utils/*": [
-        "app/utils/*",
-        "utils/*"
-      ],
-      "@/styles/*": [
-        "app/styles/*",
-        "styles/*"
-      ],
-      "@/seed/*": [
-        "app/seed/*",
-        "seed/*"
-      ],
-      "@/types/*": [
-        "types/*",
-        "app/types/*"
-      ],
-      "@assets/*": [
-        "public/assets/*",
-        "assets/*"
-      ]
+      "@/ui/*": ["./app/ui/*", "./ui/*"],
+      "@/lib/*": ["./app/lib/*", "./lib/*"],
+      "@/hooks/*": ["./app/hooks/*", "./hooks/*"],
+      "@/utils/*": ["./app/utils/*", "./utils/*"],
+      "@/styles/*": ["./app/styles/*", "./styles/*"],
+      "@/seed/*": ["./app/seed/*", "./seed/*"],
+      "@/types/*": ["./types/*", "./app/types/*"],
+      "@assets/*": ["./public/assets/*", "./assets/*"]
     },
     "plugins": [
       {
@@ -75,7 +46,5 @@
     "app/lib/placeholder-data.ts",
     "scripts/seed.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
